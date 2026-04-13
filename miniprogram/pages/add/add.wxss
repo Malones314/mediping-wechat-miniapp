@@ -1,0 +1,152 @@
+.form {
+  padding: 28rpx 32rpx 180rpx;
+}
+
+.section {
+  margin-bottom: 34rpx;
+}
+
+.label {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 14rpx;
+}
+
+.row {
+  display: flex;
+  gap: 16rpx;
+}
+
+.between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.picker {
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-radius: 20rpx;
+  padding: 22rpx 24rpx;
+  background: #ffffff;
+}
+
+.pickerValue {
+  color: #0f172a;
+}
+
+.muted {
+  color: #94a3b8;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 10rpx;
+  background: rgba(20, 184, 166, 0.10);
+  border: 1px solid rgba(20, 184, 166, 0.25);
+  border-radius: 16rpx;
+  padding: 10rpx 12rpx;
+}
+
+.stepperGray {
+  background: rgba(15, 23, 42, 0.04);
+  border-color: rgba(15, 23, 42, 0.10);
+}
+
+.stepBtn {
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f766e;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 34rpx;
+}
+
+.stepInput {
+  width: 90rpx;
+  text-align: center;
+  color: #0f766e;
+  font-weight: 700;
+}
+
+.times {
+  margin-top: 18rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 18rpx;
+}
+
+.noteRow {
+  margin-top: 12rpx;
+  margin-bottom: 10rpx;
+}
+
+.noteLabel {
+  font-size: 24rpx;
+  color: #64748b;
+  margin-bottom: 10rpx;
+  font-weight: 600;
+}
+
+.noteInput {
+  padding: 18rpx 20rpx;
+  border-radius: 18rpx;
+}
+
+.timeRow {
+  padding: 22rpx 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.timeLabel {
+  color: #64748b;
+  font-size: 26rpx;
+  font-weight: 600;
+}
+
+.timePicker {
+  background: #f1f5f9;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-radius: 16rpx;
+  padding: 12rpx 20rpx;
+  color: #334155;
+  font-weight: 600;
+  min-width: 170rpx;
+  text-align: center;
+}
+
+.tip {
+  margin-top: 14rpx;
+  background: rgba(59, 130, 246, 0.06);
+  border: 1px solid rgba(59, 130, 246, 0.12);
+  color: rgba(30, 64, 175, 0.80);
+  border-radius: 16rpx;
+  padding: 14rpx 16rpx;
+  font-size: 24rpx;
+  line-height: 34rpx;
+}
+
+.hint2 {
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  color: #64748b;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 18rpx 32rpx 40rpx;
+  background: #ffffff;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+}

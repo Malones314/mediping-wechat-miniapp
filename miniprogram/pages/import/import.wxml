@@ -1,0 +1,20 @@
+<view class="container page">
+  <view class="hero">
+    <view class="heroIcon">↗</view>
+    <view class="heroTitle">智能解析用药计划</view>
+    <view class="heroDesc">把分享码粘贴到下方，点击导入即可添加到你的日程。</view>
+  </view>
+
+  <textarea class="input textarea" placeholder="粘贴分享链接或分享码（支持 /pages/import/import?shareCode=... ）" value="{{text}}" bindinput="onTextInput" />
+
+  <button class="btnPrimary" loading="{{isImporting}}" disabled="{{isImporting}}" bindtap="onImport">
+    <text wx:if="{{isImporting}}">正在解析...</text>
+    <text wx:else>导入分享码</text>
+  </button>
+
+  <view wx:if="{{isSuccess}}" class="success">
+    <view class="successIcon">✓</view>
+    <view class="successTitle">导入成功</view>
+    <view class="successDesc">计划已添加到你的日程中</view>
+  </view>
+</view>

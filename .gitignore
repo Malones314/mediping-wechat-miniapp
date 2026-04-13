@@ -1,0 +1,13 @@
+# local secrets
+miniprogram/config.local.js
+miniprogram/project.private.config.json
+
+# system / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# logs
+*.log
+

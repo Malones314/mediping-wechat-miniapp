@@ -1,0 +1,70 @@
+.page {
+  padding: 48rpx 32rpx 40rpx;
+}
+
+.greeting {
+  margin-top: 64rpx;
+  margin-bottom: 40rpx;
+}
+
+.greetingTitle {
+  font-size: 44rpx;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.greetingSub {
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  color: #64748b;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.actionCard {
+  padding: 36rpx;
+  border-radius: 36rpx;
+}
+
+.cardIcon {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44rpx;
+  margin-bottom: 20rpx;
+}
+
+.iconAdd {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.10);
+}
+
+.iconImport {
+  color: #0ea5e9;
+  background: rgba(14, 165, 233, 0.10);
+}
+
+.iconSchedule {
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.10);
+}
+
+.cardTitle {
+  font-size: 38rpx;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8rpx;
+}
+
+.cardDesc {
+  font-size: 28rpx;
+  color: #64748b;
+}
+

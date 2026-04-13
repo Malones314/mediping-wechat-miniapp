@@ -1,0 +1,50 @@
+<view class="container page">
+  <view wx:if="{{!med}}" class="empty">
+    <view class="emptyIcon">!</view>
+    <view class="emptyText">未找到该药品信息</view>
+    <button class="btnSecondary" bindtap="onBack">返回</button>
+  </view>
+
+  <view wx:else>
+    <view class="head">
+      <view class="badge {{med.active ? 'badgeOn' : 'badgeOff'}}">
+        {{med.active ? "服药中" : "已结束"}}
+      </view>
+      <view class="name">{{med.name}}</view>
+      <view class="sub">单次用量：{{med.amount}}{{med.unit}}</view>
+    </view>
+
+    <view class="cards">
+      <view class="card infoCard">
+        <view class="infoTitle">服药周期</view>
+        <view class="infoRow">开始：<text class="strong">{{med.startDate}}</text></view>
+        <view class="infoRow">结束：<text class="strong">{{med.endDate ? med.endDate : "长期服用"}}</text></view>
+      </view>
+
+      <view class="card infoCard">
+        <view class="infoTitle">提醒设置</view>
+        <view class="infoRow">
+          间隔：
+          <text class="strong" wx:if="{{med.intervalDays == 0}}">每天</text>
+          <text class="strong" wx:else>隔{{med.intervalDays}}天一次</text>
+        </view>
+        <view class="infoRow">该天次数：<text class="strong">{{med.frequency}} 次</text></view>
+        <view class="timesGrid">
+          <block wx:for="{{med.timePoints}}" wx:key="time">
+            <view class="timeCell">
+              <view class="timeText">{{item.time}}</view>
+              <view wx:if="{{item.note}}" class="noteText">{{item.note}}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+
+    <view class="bottom">
+      <button class="btnPrimary" bindtap="onCopyShare">生成分享码并复制</button>
+      <button class="btnSecondary" open-type="share">分享给微信好友</button>
+      <button class="btnSecondary" bindtap="onEdit">编辑用药信息</button>
+      <button wx:if="{{med.active}}" class="btnDanger" bindtap="onEnd">主动结束用药提醒</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,126 @@
+.page {
+  padding-bottom: 40rpx;
+}
+
+.topActions {
+  display: flex;
+  gap: 18rpx;
+  padding: 20rpx 32rpx 10rpx;
+}
+
+.topActions button {
+  flex: 1;
+}
+
+.list {
+  padding: 18rpx 32rpx 40rpx;
+}
+
+.empty {
+  padding: 60rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.emptyIcon {
+  font-size: 76rpx;
+  margin-bottom: 18rpx;
+}
+
+.emptyText {
+  color: #334155;
+  font-weight: 800;
+  margin-bottom: 8rpx;
+}
+
+.emptyHint {
+  color: #64748b;
+  font-size: 26rpx;
+}
+
+.planCard {
+  padding: 26rpx 26rpx;
+  border-radius: 28rpx;
+  margin-bottom: 18rpx;
+}
+
+.planHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16rpx;
+}
+
+.planName {
+  font-size: 34rpx;
+  font-weight: 900;
+  color: #0f172a;
+  flex: 1;
+}
+
+.badge {
+  display: inline-flex;
+  padding: 8rpx 14rpx;
+  border-radius: 14rpx;
+  font-size: 22rpx;
+  font-weight: 800;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  white-space: nowrap;
+}
+
+.badgeOn {
+  background: rgba(20, 184, 166, 0.10);
+  color: #0f766e;
+  border-color: rgba(20, 184, 166, 0.20);
+}
+
+.badgeOff {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.planSub {
+  margin-top: 10rpx;
+  color: #64748b;
+  font-size: 26rpx;
+}
+
+.planMeta {
+  margin-top: 14rpx;
+  background: rgba(15, 23, 42, 0.03);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 18rpx;
+  padding: 16rpx 18rpx;
+}
+
+.metaLine {
+  font-size: 24rpx;
+  color: #334155;
+  margin-bottom: 6rpx;
+}
+
+.metaKey {
+  color: #64748b;
+}
+
+.planActions {
+  margin-top: 16rpx;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12rpx;
+}
+
+.small {
+  padding: 18rpx 22rpx;
+  border-radius: 18rpx;
+}
+
+.endedTitle {
+  margin-top: 18rpx;
+  margin-bottom: 12rpx;
+  font-size: 26rpx;
+  color: #64748b;
+  font-weight: 800;
+}

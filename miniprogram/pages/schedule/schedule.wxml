@@ -1,0 +1,52 @@
+<view class="container">
+  <view class="header">
+    <view class="headerRow">
+      <view class="backBtn" bindtap="onBack">&lt;</view>
+      <view class="title">今日用药</view>
+    </view>
+
+    <view class="summary">
+      <view class="summaryLeft">
+        <view class="dayNum">{{dayNum}}日</view>
+        <view class="dayLabel">{{dayLabel}}</view>
+      </view>
+      <view class="progressRing">
+        <view class="progressText">{{progress}}%</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="content">
+    <view wx:if="{{tasks.length == 0}}" class="empty">
+      <view class="emptyIcon">📅</view>
+      <view class="emptyText">今日暂无用药安排</view>
+    </view>
+
+    <view wx:else class="timeline">
+      <view class="line"></view>
+      <block wx:for="{{tasks}}" wx:key="taskId">
+        <view class="taskRow">
+          <view class="time">{{item.time}}</view>
+          <view class="dotWrap">
+            <view class="dot {{item.done ? 'dotDone' : ''}}"></view>
+          </view>
+
+          <view class="taskCard card" data-medid="{{item.medId}}" bindtap="onOpenDetail">
+            <view class="pill {{item.done ? 'pillDone' : ''}}">药</view>
+            <view class="taskMain">
+              <view class="taskName {{item.done ? 'strike' : ''}}">{{item.name}}</view>
+              <view class="taskDesc">{{item.desc}}</view>
+              <view wx:if="{{item.note}}" class="taskNote">{{item.note}}</view>
+            </view>
+            <view class="checkWrap">
+              <view class="check {{item.done ? 'checked' : ''}}" catchtap="onToggleDone" data-taskid="{{item.taskId}}">✓</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class="fab" bindtap="onAdd">+</view>
+</view>
+

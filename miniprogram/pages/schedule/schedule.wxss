@@ -1,0 +1,210 @@
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rpx 32rpx 26rpx;
+}
+
+.dayNum {
+  font-size: 60rpx;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.dayLabel {
+  margin-top: 8rpx;
+  font-size: 26rpx;
+  color: #64748b;
+}
+
+.progressRing {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  border: 6rpx solid rgba(16, 185, 129, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progressText {
+  color: #10b981;
+  font-weight: 800;
+  font-size: 26rpx;
+}
+
+.content {
+  padding: 36rpx 32rpx 170rpx;
+}
+
+.empty {
+  height: 500rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.75;
+}
+
+.emptyIcon {
+  font-size: 80rpx;
+  margin-bottom: 18rpx;
+}
+
+.emptyText {
+  color: #64748b;
+}
+
+.timeline {
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  left: 92rpx;
+  top: 10rpx;
+  bottom: 10rpx;
+  width: 2rpx;
+  background: rgba(15, 23, 42, 0.10);
+}
+
+.taskRow {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 18rpx;
+  margin-bottom: 26rpx;
+}
+
+.time {
+  width: 92rpx;
+  text-align: right;
+  font-weight: 700;
+  color: #334155;
+  padding-top: 24rpx;
+}
+
+.dotWrap {
+  position: absolute;
+  left: 92rpx;
+  top: 40rpx;
+  transform: translateX(-50%);
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: 9rpx;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.dot {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 5rpx;
+  background: #cbd5e1;
+}
+
+.dotDone {
+  background: #10b981;
+}
+
+.taskCard {
+  flex: 1;
+  padding: 22rpx 22rpx;
+  display: flex;
+  align-items: center;
+  gap: 18rpx;
+  border-radius: 28rpx;
+}
+
+.pill {
+  width: 92rpx;
+  height: 92rpx;
+  border-radius: 24rpx;
+  background: #f1f5f9;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.pillDone {
+  background: rgba(16, 185, 129, 0.10);
+  color: #10b981;
+}
+
+.taskMain {
+  flex: 1;
+}
+
+.taskName {
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 6rpx;
+}
+
+.strike {
+  color: #64748b;
+  text-decoration: line-through;
+}
+
+.taskDesc {
+  font-size: 26rpx;
+  color: #64748b;
+}
+
+.taskNote {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #475569;
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  padding: 10rpx 12rpx;
+  border-radius: 14rpx;
+  line-height: 32rpx;
+}
+
+.checkWrap {
+  width: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.check {
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 28rpx;
+  border: 4rpx solid rgba(15, 23, 42, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  font-weight: 900;
+}
+
+.checked {
+  border-color: #10b981;
+  background: #10b981;
+  color: #ffffff;
+}
+
+.fab {
+  position: fixed;
+  right: 32rpx;
+  bottom: 80rpx;
+  width: 112rpx;
+  height: 112rpx;
+  border-radius: 56rpx;
+  background: #10b981;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56rpx;
+  box-shadow: 0 20rpx 60rpx rgba(16, 185, 129, 0.35);
+  z-index: 20;
+}

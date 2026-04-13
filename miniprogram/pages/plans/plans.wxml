@@ -1,0 +1,78 @@
+<view class="container page">
+  <view class="header">
+    <view class="headerRow">
+      <view class="backBtn" bindtap="onBack">&lt;</view>
+      <view class="title">查看信息</view>
+    </view>
+  </view>
+
+  <view class="topActions">
+    <button class="btnPrimary" bindtap="onGoSchedule">今日用药</button>
+    <button class="btnSecondary" bindtap="onAdd">新增计划</button>
+  </view>
+
+  <view class="list">
+    <view wx:if="{{activePlans.length == 0 && endedPlans.length == 0}}" class="empty">
+      <view class="emptyIcon">📄</view>
+      <view class="emptyText">暂无用药计划</view>
+      <view class="emptyHint">点击“新增计划”开始录入</view>
+    </view>
+
+    <block wx:else>
+      <block wx:for="{{activePlans}}" wx:key="id">
+        <view class="planCard card" data-id="{{item.id}}" bindtap="onOpenDetail">
+          <view class="planHead">
+            <view class="planName">{{item.name}}</view>
+            <view class="badge badgeOn">服药中</view>
+          </view>
+
+          <view class="planSub">单次用量：{{item.amount}}{{item.unit}}</view>
+
+          <view class="planMeta">
+            <view class="metaLine">
+              <text class="metaKey">间隔：</text>
+              <text wx:if="{{item.intervalDays == 0}}">每天</text>
+              <text wx:else>隔{{item.intervalDays}}天一次</text>
+            </view>
+            <view class="metaLine"><text class="metaKey">该天次数：</text>{{item.frequency}} 次</view>
+            <view class="metaLine"><text class="metaKey">时间点：</text>{{item.timesText}}</view>
+          </view>
+
+          <view class="planActions">
+            <button class="btnSecondary small" data-id="{{item.id}}" catchtap="onEdit">编辑</button>
+            <button class="btnDanger small" data-id="{{item.id}}" catchtap="onDelete">删除</button>
+          </view>
+        </view>
+      </block>
+
+      <view wx:if="{{endedPlans.length > 0}}" class="endedTitle">已结束（7天后自动清理）</view>
+      <block wx:for="{{endedPlans}}" wx:key="id">
+        <view class="planCard card" data-id="{{item.id}}" bindtap="onOpenDetail">
+          <view class="planHead">
+            <view class="planName">{{item.name}}</view>
+            <view class="badge badgeOff">已结束</view>
+          </view>
+
+          <view class="planSub">单次用量：{{item.amount}}{{item.unit}}</view>
+
+          <view class="planMeta">
+            <view class="metaLine">
+              <text class="metaKey">间隔：</text>
+              <text wx:if="{{item.intervalDays == 0}}">每天</text>
+              <text wx:else>隔{{item.intervalDays}}天一次</text>
+            </view>
+            <view class="metaLine"><text class="metaKey">该天次数：</text>{{item.frequency}} 次</view>
+            <view class="metaLine"><text class="metaKey">时间点：</text>{{item.timesText}}</view>
+            <view wx:if="{{item.endDate}}" class="metaLine"><text class="metaKey">结束日期：</text>{{item.endDate}}</view>
+          </view>
+
+          <view class="planActions">
+            <button class="btnSecondary small" data-id="{{item.id}}" catchtap="onEdit">编辑</button>
+            <button class="btnDanger small" data-id="{{item.id}}" catchtap="onDelete">删除</button>
+          </view>
+        </view>
+      </block>
+    </block>
+  </view>
+</view>
+

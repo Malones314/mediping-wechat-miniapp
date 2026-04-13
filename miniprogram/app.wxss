@@ -1,0 +1,87 @@
+page {
+  background: #f8fafc;
+  color: #0f172a;
+  font-size: 32rpx;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #ffffff;
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.06);
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  padding: 28rpx 32rpx 24rpx;
+}
+
+.backBtn {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 36rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #475569;
+}
+
+.title {
+  font-size: 34rpx;
+  font-weight: 600;
+  margin-left: 8rpx;
+  color: #0f172a;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 28rpx;
+  box-shadow: 0 10rpx 30rpx rgba(15, 23, 42, 0.04);
+}
+
+.btnPrimary {
+  background: #14b8a6;
+  color: #ffffff;
+  border-radius: 24rpx;
+  padding: 26rpx 24rpx;
+  font-weight: 600;
+}
+
+.btnSecondary {
+  background: #f1f5f9;
+  color: #0f172a;
+  border-radius: 24rpx;
+  padding: 26rpx 24rpx;
+  font-weight: 600;
+}
+
+.btnDanger {
+  background: #fee2e2;
+  color: #ef4444;
+  border-radius: 24rpx;
+  padding: 26rpx 24rpx;
+  font-weight: 600;
+}
+
+.input {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-radius: 20rpx;
+  padding: 22rpx 24rpx;
+  color: #0f172a;
+}
+
+.hint {
+  font-size: 24rpx;
+  color: #64748b;
+}
+

@@ -1,0 +1,75 @@
+<view class="container">
+  <view class="form">
+    <view class="section">
+      <view class="label">药品名称</view>
+      <input class="input" placeholder="请输入药品名称" value="{{name}}" bindinput="onNameInput" />
+    </view>
+
+    <view class="section">
+      <view class="label">单次剂量</view>
+      <view class="row">
+        <input class="input flex1" type="digit" value="{{amount}}" bindinput="onAmountInput" />
+        <picker class="picker" mode="selector" range="{{units}}" value="{{unitIndex}}" bindchange="onUnitChange">
+          <view class="pickerValue">{{units[unitIndex]}}</view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="section">
+      <view class="row between">
+        <view class="label">隔多少天服用</view>
+        <view class="stepper stepperGray">
+          <view class="stepBtn" bindtap="onIntervalMinus">－</view>
+          <input class="stepInput" type="number" value="{{intervalDays}}" bindinput="onIntervalInput" />
+          <view class="stepBtn" bindtap="onIntervalPlus">＋</view>
+        </view>
+      </view>
+      <view class="hint2">默认为 0（每天）。例如：1 表示隔一天服用一次。</view>
+    </view>
+
+    <view class="section">
+      <view class="row between">
+        <view class="label">该天用药次数</view>
+        <view class="stepper">
+          <view class="stepBtn" bindtap="onFreqMinus">－</view>
+          <input class="stepInput" type="number" value="{{frequency}}" bindinput="onFreqInput" />
+          <view class="stepBtn" bindtap="onFreqPlus">＋</view>
+        </view>
+      </view>
+
+      <view class="times">
+        <block wx:for="{{timePoints}}" wx:key="time">
+          <view class="timeRow card">
+            <view class="timeLabel">第{{index+1}}次</view>
+            <picker mode="time" value="{{item.time}}" data-index="{{index}}" bindchange="onTimeChange">
+              <view class="timePicker">{{item.time}}</view>
+            </picker>
+          </view>
+          <view class="noteRow">
+            <view class="noteLabel">医嘱备注（可选）</view>
+            <input class="input noteInput" placeholder="无备注" value="{{item.note}}" data-index="{{index}}" bindinput="onNoteInput" />
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <view class="section">
+      <view class="label">日期设置</view>
+      <view class="row">
+        <picker class="picker flex1" mode="date" value="{{startDate}}" bindchange="onStartDateChange">
+          <view class="pickerValue">{{startDate}}</view>
+        </picker>
+        <picker class="picker flex1" mode="date" start="{{startDate}}" value="{{endDate}}" bindchange="onEndDateChange">
+          <view class="pickerValue muted">{{endDate ? endDate : "结束日期（可选）"}}</view>
+        </picker>
+      </view>
+      <view class="tip">
+        * 提示：如果不设置结束日期，系统将默认其为长期服药状态。
+      </view>
+    </view>
+  </view>
+
+  <view class="footer">
+    <button class="btnPrimary" bindtap="onSave">保存计划</button>
+  </view>
+</view>

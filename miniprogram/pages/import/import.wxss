@@ -1,0 +1,79 @@
+.page {
+  padding: 48rpx 32rpx;
+}
+
+.hero {
+  margin-top: 64rpx;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+.heroIcon {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 80rpx;
+  margin: 0 auto 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(14, 165, 233, 0.10);
+  color: #0ea5e9;
+  font-size: 60rpx;
+  font-weight: 800;
+}
+
+.heroTitle {
+  font-size: 38rpx;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10rpx;
+}
+
+.heroDesc {
+  font-size: 26rpx;
+  color: #64748b;
+  line-height: 36rpx;
+  margin: 0 auto;
+  max-width: 520rpx;
+}
+
+.textarea {
+  margin-top: 24rpx;
+  height: 240rpx;
+  padding: 18rpx 20rpx;
+}
+
+.success {
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.96;
+}
+
+.successIcon {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 90rpx;
+  background: rgba(20, 184, 166, 0.10);
+  color: #14b8a6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80rpx;
+  font-weight: 900;
+  margin-bottom: 18rpx;
+}
+
+.successTitle {
+  font-size: 44rpx;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 8rpx;
+}
+
+.successDesc {
+  font-size: 26rpx;
+  color: #64748b;
+}
+

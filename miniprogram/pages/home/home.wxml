@@ -1,0 +1,26 @@
+<view class="container page">
+  <view class="greeting">
+    <view class="greetingTitle">{{greeting}}</view>
+    <view class="greetingSub">请选择您要进行的操作</view>
+  </view>
+
+  <view class="cards">
+    <view class="actionCard card" data-url="/pages/add/add" bindtap="onGo">
+      <view class="cardIcon iconAdd">＋</view>
+      <view class="cardTitle">录入信息</view>
+      <view class="cardDesc">添加新的用药提醒</view>
+    </view>
+
+    <view class="actionCard card" data-url="/pages/import/import" bindtap="onGo">
+      <view class="cardIcon iconImport">↓</view>
+      <view class="cardTitle">导入信息</view>
+      <view class="cardDesc">解析他人分享的计划</view>
+    </view>
+
+    <view class="actionCard card" data-url="/pages/plans/plans" bindtap="onGo">
+      <view class="cardIcon iconSchedule">✓</view>
+      <view class="cardTitle">查看信息</view>
+      <view class="cardDesc">管理当前的服药安排</view>
+    </view>
+  </view>
+</view>
